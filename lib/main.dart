@@ -59,6 +59,13 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
+  void _resetQuiz() {
+    setState(() {
+    _questionIndex = 0;
+    _totalScore = 0;
+    });
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -75,7 +82,7 @@ class _MyAppState extends State<MyApp> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               )
-            :  Result(_totalScore),
+            : Result(resetQuiz: _resetQuiz, totalScore: _totalScore),
       ),
     );
   }
