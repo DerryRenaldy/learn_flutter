@@ -33,6 +33,8 @@ class Result extends StatelessWidget {
               style:
                   const TextStyle(fontSize: 36, fontWeight: FontWeight.bold)),
           ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.amber)),
             onPressed: resetQuiz,
             child: const Text('Restart Quiz!'),
           ),

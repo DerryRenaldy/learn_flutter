@@ -61,8 +61,8 @@ class _MyAppState extends State<MyApp> {
 
   void _resetQuiz() {
     setState(() {
-    _questionIndex = 0;
-    _totalScore = 0;
+      _questionIndex = 0;
+      _totalScore = 0;
     });
   }
 
@@ -83,6 +83,10 @@ class _MyAppState extends State<MyApp> {
                 questions: _questions,
               )
             : Result(resetQuiz: _resetQuiz, totalScore: _totalScore),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => {},
+          child: const Icon(Icons.access_alarm_sharp),
+        ),
       ),
     );
   }
